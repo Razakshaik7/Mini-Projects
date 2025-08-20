@@ -1,7 +1,7 @@
 import random
 target=random.randint(1,100)
 while True:
-    userchoice=int(input("Guess the target or Quit: "))
+    userchoice=(input("Guess the target or Quit: "))
     if(userchoice=="Quit"):
         break
     userchoice=int(userchoice)
