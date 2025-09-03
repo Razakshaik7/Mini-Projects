@@ -1,0 +1,51 @@
+import time
+password=1234
+balance=10000
+print("welcome to SBI bank")
+print("insert your card")
+print("1.yes \n2.no")
+card=int(input())
+if card==1:
+    print("select the language:")
+    print("1.english \n2.telugu \n3.kannada")
+    lang=int(input())
+    if lang==1:
+        print("enter your pin:")
+        pin=int(input())
+        if pin==password:
+            print("select the option:")
+            print("1.Balance Enquiry \n2.Withdrawal")
+            option=int(input())
+            if option==1:
+                print("your available balance is:", balance)
+                time.sleep(1)
+                print("Thank you visit again")
+            elif option==2:
+                print("enter the amount:")
+                amount=int(input())
+                if amount>balance:
+                    print("insufficient balance!!!")
+                elif amount%100==0:
+                    print("your transaction is processing")
+                    time.sleep(2)
+                    print("please collect your cash")
+                    time.sleep(1)
+                    print("do you want to check your balance:")
+                    print("1.yes \n2.no")
+                    option2=int(input())
+                    if option2==1:
+                        print("your available balance is:", balance-amount)
+                    elif option==2:
+                        print("Thank you visit again")
+                    else:
+                        print("invalid option!!!")
+                else:
+                    print("enter valid amount!!!")
+            else:
+                print("invalid option!!!")
+        else:
+            print("incorrect pin!!!")
+    else:
+        print("please select english!!!")
+else:
+    print("insert your card properly!!!")
